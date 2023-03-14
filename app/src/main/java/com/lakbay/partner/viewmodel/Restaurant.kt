@@ -1,7 +1,10 @@
 package com.lakbay.partner.viewmodel
 
 class Restaurant() {
-    var id:String = ""
+    companion object {
+        const val FIELD_UID = "uid"
+    }
+    var uid:String = ""
     var loc_lat: Double = 0.0
     var loc_lng: Double = 0.0
     var name: String = ""
