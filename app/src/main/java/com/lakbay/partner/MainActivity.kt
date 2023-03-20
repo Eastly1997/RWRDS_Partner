@@ -1,7 +1,9 @@
 package com.lakbay.partner
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
@@ -24,6 +26,13 @@ class MainActivity : BaseActivity() {
 
     private fun init() {
         initAds()
+        initOnclick()
+    }
+
+    private fun initOnclick() {
+        binding.addProduct = View.OnClickListener {
+            startActivity(Intent(this, ManageItemActivity::class.java))
+        }
     }
 
     private fun initAds() {
@@ -35,7 +44,7 @@ class MainActivity : BaseActivity() {
 
             override fun onAdLoaded(interstitialAd: InterstitialAd) {
                 Log.d(TAG, "Ad was loaded.")
-                displayAds(interstitialAd);
+                displayAds(interstitialAd)
             }
         })
 

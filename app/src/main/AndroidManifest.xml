@@ -8,8 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.LKBYPartner">
+        android:theme="@style/Theme.LKBYPartner"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".UpdateProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageItemActivity"
+            android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -21,12 +30,11 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" />
 
-        </activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5106113422678211~2592719142"/>
+            android:value="ca-app-pub-5106113422678211~2592719142" />
     </application>
 
 </manifest>

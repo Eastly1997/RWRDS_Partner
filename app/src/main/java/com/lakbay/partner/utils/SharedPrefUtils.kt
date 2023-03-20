@@ -43,7 +43,7 @@ class SharedPrefUtils {
 
         fun getStringData(context: Context, key: String): String? {
             return context.getSharedPreferences(PREF_APP, Context.MODE_PRIVATE)
-                .getString(key, "")
+                .getString(key, CommonConstants.ENVIRONMENT_STAGING)
         }
 
         fun getBooleanData(context: Context, key: String): Boolean {

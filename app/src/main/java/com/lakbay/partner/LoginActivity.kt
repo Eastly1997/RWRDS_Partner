@@ -6,9 +6,16 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.google.android.gms.ads.MobileAds
+import com.google.firebase.FirebaseApp
+import com.google.firebase.appcheck.FirebaseAppCheck
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.lakbay.partner.databinding.ActivityLoginBinding
+import com.lakbay.partner.utils.CommonConstants
 import com.lakbay.partner.utils.FirebaseUtils
+import com.lakbay.partner.utils.SharedPrefUtils
 import com.lakbay.partner.viewmodel.Restaurant
 
 class LoginActivity : BaseActivity() {
@@ -23,8 +30,9 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun init() {
-        MobileAds.initialize(this)
         val auth = FirebaseAuth.getInstance()
+        initData(auth)
+
         if(auth.currentUser != null) {
             startActivity(
                 Intent(this@LoginActivity, MainActivity::class.java)
@@ -55,5 +63,32 @@ class LoginActivity : BaseActivity() {
                     }
                 }
         }
+    }
+
+    private fun initData(auth: FirebaseAuth) {
+        FirebaseApp.initializeApp( this)
+        val firebaseAppCheck = FirebaseAppCheck.getInstance()
+
+        val storageEnv = SharedPrefUtils.getStringData(this, CommonConstants.ENVIRONMENT)
+        val currentEnv = CommonConstants.ENVIRONMENT_STAGING
+
+        if(storageEnv == CommonConstants.ENVIRONMENT_STAGING) {
+            firebaseAppCheck.installAppCheckProviderFactory(
+                DebugAppCheckProviderFactory.getInstance()
+            )
+        }
+
+        if(storageEnv != currentEnv) {
+            Firebase.auth.signOut();
+            SharedPrefUtils.clearData(this)
+            SharedPrefUtils.saveData(this, CommonConstants.ENVIRONMENT, currentEnv)
+        } else {
+            startActivity(
+                Intent(this@LoginActivity, MainActivity::class.java)
+                    .putExtra(Restaurant.FIELD_UID, auth.currentUser!!.uid)
+            )
+            finishAffinity()
+        }
+
     }
 }
