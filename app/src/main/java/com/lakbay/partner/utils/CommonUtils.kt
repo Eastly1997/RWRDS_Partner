@@ -9,7 +9,7 @@ class CommonUtils {
             return if(SharedPrefUtils.getStringData(context, CommonConstants.ENVIRONMENT) == null)
                 CommonConstants.ENVIRONMENT_STAGING;
             else
-                SharedPrefUtils.getStringData(context, CommonConstants.ENVIRONMENT_PRODUCTION)!!
+                SharedPrefUtils.getStringData(context, CommonConstants.ENVIRONMENT)!!
         }
         fun getAdUnitID(context: Context): String {
             return if(getEnvironment(context) == CommonConstants.ENVIRONMENT_STAGING)

@@ -41,9 +41,9 @@ class SharedPrefUtils {
                 .apply()
         }
 
-        fun getStringData(context: Context, key: String): String? {
+        fun getStringData(context: Context, key: String): String {
             return context.getSharedPreferences(PREF_APP, Context.MODE_PRIVATE)
-                .getString(key, CommonConstants.ENVIRONMENT_STAGING)
+                .getString(key, getDefault(key))!!
         }
 
         fun getBooleanData(context: Context, key: String): Boolean {
@@ -71,6 +71,14 @@ class SharedPrefUtils {
                 .edit()
                 .clear()
                 .apply()
+        }
+
+        private fun getDefault(key: String): String {
+            return if(key == CommonConstants.ENVIRONMENT) {
+                CommonConstants.ENVIRONMENT_PRODUCTION
+            } else {
+                ""
+            }
         }
     }
 }

@@ -31,13 +31,10 @@ class LoginActivity : BaseActivity() {
 
     private fun init() {
         val auth = FirebaseAuth.getInstance()
-        initData(auth)
+        initData()
 
         if(auth.currentUser != null) {
-            startActivity(
-                Intent(this@LoginActivity, MainActivity::class.java)
-                    .putExtra(Restaurant.FIELD_UID, auth.currentUser!!.uid)
-            )
+            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             finishAffinity()
         }
 
@@ -48,11 +45,9 @@ class LoginActivity : BaseActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
+                        SharedPrefUtils.saveData(this@LoginActivity, Restaurant.FIELD_UID, auth.currentUser!!.uid);
                         Log.d(FirebaseUtils.TAG, "signInWithEmail:success")
-                        startActivity(
-                            Intent(this@LoginActivity, MainActivity::class.java)
-                                .putExtra(Restaurant.FIELD_UID, auth.currentUser!!.uid)
-                        )
+                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finishAffinity()
                     } else {
                         // If sign in fails, display a message to the user.
@@ -65,7 +60,7 @@ class LoginActivity : BaseActivity() {
         }
     }
 
-    private fun initData(auth: FirebaseAuth) {
+    private fun initData() {
         FirebaseApp.initializeApp( this)
         val firebaseAppCheck = FirebaseAppCheck.getInstance()
 
@@ -82,12 +77,6 @@ class LoginActivity : BaseActivity() {
             Firebase.auth.signOut();
             SharedPrefUtils.clearData(this)
             SharedPrefUtils.saveData(this, CommonConstants.ENVIRONMENT, currentEnv)
-        } else {
-            startActivity(
-                Intent(this@LoginActivity, MainActivity::class.java)
-                    .putExtra(Restaurant.FIELD_UID, auth.currentUser!!.uid)
-            )
-            finishAffinity()
         }
 
     }
