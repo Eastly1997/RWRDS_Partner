@@ -1,4 +1,4 @@
-package com.lakbay.partner.utils
+package com.rewards.partner.utils
 
 class FirebaseUtils {
     companion object {

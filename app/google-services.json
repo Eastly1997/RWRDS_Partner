@@ -15,20 +15,23 @@
       },
       "oauth_client": [
         {
-          "client_id": "204159535866-nfgcnkckdacjdl307sf1l35fbmr911r8.apps.googleusercontent.com",
+          "client_id": "204159535866-ka07gvgef2i8cqcj2292ubvdb5rev0r6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
           "current_key": "AIzaSyBqGVif2cNqKaaKiW84s6NJEoylXbO0TV4"
+        },
+        {
+          "current_key": "AIzaSyCW8BvPZn8gI0f2TcZCeW1BqNpCJP_K-kc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "204159535866-nfgcnkckdacjdl307sf1l35fbmr911r8.apps.googleusercontent.com",
+              "client_id": "204159535866-ka07gvgef2i8cqcj2292ubvdb5rev0r6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -44,20 +47,31 @@
       },
       "oauth_client": [
         {
-          "client_id": "204159535866-nfgcnkckdacjdl307sf1l35fbmr911r8.apps.googleusercontent.com",
+          "client_id": "204159535866-fmic3umt343pvnq3kbgsv0a7a4qk3shr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lakbay.partner",
+            "certificate_hash": "cdd24030851eae7efefbfd43a2441d6d260d5caf"
+          }
+        },
+        {
+          "client_id": "204159535866-ka07gvgef2i8cqcj2292ubvdb5rev0r6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
           "current_key": "AIzaSyBqGVif2cNqKaaKiW84s6NJEoylXbO0TV4"
+        },
+        {
+          "current_key": "AIzaSyCW8BvPZn8gI0f2TcZCeW1BqNpCJP_K-kc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "204159535866-nfgcnkckdacjdl307sf1l35fbmr911r8.apps.googleusercontent.com",
+              "client_id": "204159535866-ka07gvgef2i8cqcj2292ubvdb5rev0r6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

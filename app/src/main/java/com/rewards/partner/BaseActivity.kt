@@ -1,9 +1,9 @@
-package com.lakbay.partner
+package com.rewards.partner
 
 import android.content.Context
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
-import com.lakbay.partner.utils.CommonConstants.Companion.FONT_SCALE_LARGE
+import com.rewards.partner.utils.CommonConstants.Companion.FONT_SCALE_LARGE
 
 abstract class BaseActivity : AppCompatActivity() {
     override fun attachBaseContext(newBase: Context?) {

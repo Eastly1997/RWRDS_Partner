@@ -1,4 +1,4 @@
-package com.lakbay.partner.viewmodel
+package com.rewards.partner.viewmodel
 
 class Restaurant() {
     companion object {
