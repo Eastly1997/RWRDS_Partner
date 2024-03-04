@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -13,8 +14,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.lakbay.partner.R
-import com.lakbay.partner.databinding.ActivityLoginBinding
+import com.rewards.partner.databinding.ActivityLoginBinding
+
 
 class LoginActivity : BaseActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -22,7 +23,7 @@ class LoginActivity : BaseActivity() {
     private lateinit var auth: FirebaseAuth
 
     companion object {
-        private val TAG = LoginActivity::class.java.simpleName.toString()
+        private val TAG = LoginActivity::class.java.simpleName
         private const val RC_SIGN_IN = 9001
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +96,11 @@ class LoginActivity : BaseActivity() {
 
 
     private fun updateUI(user: FirebaseUser?) {
-
+        if(user == null) {
+            Toast.makeText(this, "No User Found", Toast.LENGTH_SHORT).show()
+        } else {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 }

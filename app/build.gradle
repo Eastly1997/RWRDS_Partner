@@ -10,7 +10,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.lakbay.partner"
+        applicationId "com.rewards.partner"
         minSdk 23
         targetSdk 34
         versionCode 1
@@ -36,7 +36,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'com.lakbay.partner'
+    namespace 'com.rewards.partner'
 }
 
 dependencies {
