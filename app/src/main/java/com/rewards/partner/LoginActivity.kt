@@ -24,6 +24,7 @@ class LoginActivity : BaseActivity() {
 
     companion object {
         private val TAG = LoginActivity::class.java.simpleName
+        var apiKey: String = BuildConfig.API_KEY
         private const val RC_SIGN_IN = 9001
     }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +37,7 @@ class LoginActivity : BaseActivity() {
     private fun init() {
         // GoogleSignInClientConfig
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken(apiKey)
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)

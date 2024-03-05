@@ -4,7 +4,7 @@ import android.content.Context
 
 class SharedPrefUtils {
     companion object {
-        private val PREF_APP = "LKBY Partner"
+        private const val PREF_APP = "Rewards Partner"
 
         fun saveData(context: Context, key: String, value: String) {
             context.getSharedPreferences(PREF_APP, Context.MODE_PRIVATE)

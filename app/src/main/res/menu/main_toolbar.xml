@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_customer"
+        android:icon="@drawable/ic_person_add"
+        android:contentDescription="@string/main_toolbar_customer"
+        app:showAsAction="ifRoom"
+        android:title="@string/main_toolbar_customer" />
+    <item
+        android:id="@+id/toolbar_shift"
+        android:icon="@drawable/ic_time"
+        android:contentDescription="@string/main_nav_shift"
+        app:showAsAction="ifRoom"
+        android:visible="false"
+        android:title="@string/main_nav_shift" />
+
+</menu>

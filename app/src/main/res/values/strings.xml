@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Rewards Partner</string>
-    <string name="default_web_client_id">1090518218450-l05dub1h17nii6jj0fsh0jib6403uk28.apps.googleusercontent.com</string>
+
+<!--    MainActivity Navigation-->
+    <string name="main_nav_sub_header">Header</string>
+    <string name="main_nav_sub_text">La Bubbles</string>
+    <string name="main_nav_sub_title">Wesley</string>
+    <string name="main_nav_sales">Sales</string>
+    <string name="main_nav_receipt">Receipt</string>
+    <string name="main_nav_shift">Shift</string>
+    <string name="main_nav_item">Item</string>
+    <string name="main_nav_settings">Settings</string>
+    <string name="main_nav_logout">Logout</string>
+
+<!--    MainActivity TopBar-->
+    <string name="main_toolbar_title">Title</string>
+    <string name="main_toolbar_add">Add</string>
+    <string name="main_toolbar_ticket">Ticket</string>
+    <string name="main_toolbar_menu">Menu</string>
+    <string name="main_toolbar_customer">Customer</string>
+
 </resources>
