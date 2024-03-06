@@ -1,16 +1,15 @@
 <resources>
     <string name="app_name">Rewards Partner</string>
+    <string name="sales_title">Sales</string>
+    <string name="receipt_title">Receipt</string>
+    <string name="shift_title">Shift</string>
+    <string name="item_title">Item</string>
+    <string name="setting_title">Settings</string>
+    <string name="logout">Logout</string>
 
-<!--    MainActivity Navigation-->
-    <string name="main_nav_sub_header">Header</string>
-    <string name="main_nav_sub_text">La Bubbles</string>
-    <string name="main_nav_sub_title">Wesley</string>
-    <string name="main_nav_sales">Sales</string>
-    <string name="main_nav_receipt">Receipt</string>
-    <string name="main_nav_shift">Shift</string>
-    <string name="main_nav_item">Item</string>
-    <string name="main_nav_settings">Settings</string>
-    <string name="main_nav_logout">Logout</string>
+<!--    Dummy Data for dummies-->
+    <string name="dummy_shop">La Bubbles</string>
+    <string name="dummy_owner">Wesley</string>
 
 <!--    MainActivity TopBar-->
     <string name="main_toolbar_title">Title</string>

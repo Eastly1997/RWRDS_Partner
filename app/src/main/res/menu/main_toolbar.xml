@@ -7,13 +7,14 @@
         android:icon="@drawable/ic_person_add"
         android:contentDescription="@string/main_toolbar_customer"
         app:showAsAction="ifRoom"
+        android:tint="@color/white"
         android:title="@string/main_toolbar_customer" />
     <item
         android:id="@+id/toolbar_shift"
         android:icon="@drawable/ic_time"
-        android:contentDescription="@string/main_nav_shift"
+        android:contentDescription="@string/shift_title"
         app:showAsAction="ifRoom"
         android:visible="false"
-        android:title="@string/main_nav_shift" />
+        android:title="@string/shift_title" />
 
 </menu>

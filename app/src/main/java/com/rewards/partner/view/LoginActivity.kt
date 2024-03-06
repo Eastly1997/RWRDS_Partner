@@ -1,4 +1,4 @@
-package com.rewards.partner
+package com.rewards.partner.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,9 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.rewards.partner.BuildConfig
 import com.rewards.partner.databinding.ActivityLoginBinding
+import com.rewards.partner.view.main.MainActivity
 
 
 class LoginActivity : BaseActivity() {

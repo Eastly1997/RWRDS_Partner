@@ -12,24 +12,36 @@
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".MainActivity"
+            tools:context=".view.main.MainActivity"
             android:orientation="vertical">
-
-            <com.google.android.material.appbar.AppBarLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="24dp"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/topAppBar"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.google.android.material.appbar.AppBarLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="?attr/actionBarSize"
-                    app:navigationIcon="@drawable/ic_menu"
-                    app:title="Ticket 0"
-                    app:menu="@menu/main_toolbar" />
+                    android:layout_height="wrap_content">
 
-            </com.google.android.material.appbar.AppBarLayout>
+                    <com.google.android.material.appbar.MaterialToolbar
+                        android:id="@+id/topAppBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="?attr/actionBarSize"
+                        app:navigationIcon="@drawable/ic_menu"
+                        app:titleTextColor="@color/white"
+                        app:title="Ticket 0"
+                        android:background="@color/green_2"
+                        app:navigationIconTint="@color/white"
+                        app:menu="@menu/main_toolbar" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <FrameLayout
+                    android:id="@+id/fragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -43,7 +55,5 @@
             app:itemTextColor="@color/black_80"
             app:itemIconTint="@color/black_80"
             app:menu="@menu/main_navigation" />
-
-
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

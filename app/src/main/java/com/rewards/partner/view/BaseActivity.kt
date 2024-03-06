@@ -1,4 +1,4 @@
-package com.rewards.partner
+package com.rewards.partner.view
 
 import android.content.Context
 import android.content.res.Configuration
